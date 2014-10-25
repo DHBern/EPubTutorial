@@ -1,1 +1,45 @@
 body { padding-top: 70px; }
+
+span{
+	margin-right: 5px;
+}
+
+ul{
+	padding-left: 0;
+}
+
+a, a:link{
+	text-decoration: none;
+}
+
+.menu{
+	margin-top: 10px;
+}
+
+code{
+	display: block;
+	width: 50%;
+}
+
+p code{
+	display: inline;
+}
+
+
+
+/* This is one of my personal settings I use for almost every page */ 
+html, body{
+	height: 100%;
+}
+main{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -30px;
+}
+.push{
+	height: 30px;
+}
+footer{
+	height: 30px;
+}

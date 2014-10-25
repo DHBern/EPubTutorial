@@ -75,14 +75,25 @@
 				</div>
 				<div class="col-md-6">
 					<p>Well there is a bulletlist in the navigation bar already so let's go with a numbered list althoug we can still change it afterwards in CSS, because it has nothing to to how it is displayed rather then how it is interpreted by Google^^</p>
-				</div>
+					<p>If you want to have some fun with bulletlists you should try either of those two lines in css: </p>
+					<code>
+						ol{
+							list-style-type: upper-roman; 
+						}
+					</code>
+					<code>
+						ol{
+							list-style-type: lower-alpha; 
+						}
+					</code>
+				</div>	
 			</div>
-			<div class="row">
+			<div class="row menu">
 				<div class="col-md-12">
 					<ul>
-						<li><a href="slide1.html"><span class="glyphicon glyphicon-backward"></span>Previous Slide</a></li>
-						<li><a href="slide3.html"><span class="glyphicon glyphicon-forward"></span>Next Slide</a></li>
-						<li><a href="slide1.html"><span class="glyphicon glyphicon-repeat"></span>Start over</a></li>
+						<li class="btn btn-default"><a href="slide1.html"><span class="glyphicon glyphicon-backward"></span>Previous Slide</a></li>
+						<li class="btn btn-default"><a href="slide3.html"><span class="glyphicon glyphicon-forward"></span>Next Slide</a></li>
+						<li class="btn btn-default"><a href="slide1.html"><span class="glyphicon glyphicon-repeat"></span>Start over</a></li>
 					</ul>
 				</div>
 			</div>
