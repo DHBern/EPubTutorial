@@ -3,72 +3,48 @@
 	<meta charset="UTF-8">
 	<title>E-Publishing Example Page</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- 	<header class="fixed">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-7 logo">
-					<a href="#" title="Zurück zur Startseite" alt="Zurück zur Startseite">
-						<img src="" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</header> -->
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">E-Publishing Example</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li class="active"><a href="slide1.html">Slide 1</a></li>
-					<li><a href="slide2.html">Slide 2</a></li>
-					<li><a href="slide3.html">Slide 3</a></li>
-				</ul>
-			</li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="http://dhbern.eccentricity.org/wiki/Main_Page">Wiki</a></li>
-            <li><a href="http://dhbern.eccentricity.org/blog/">Blog</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <a class="navbar-brand" href="index.html">E-Publishing Example</a>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			  <li class="active"><a href="slide1.html">Slide 1</a></li>
+			  <li><a href="slide2.html">Slide 2</a></li>
+			  <li><a href="slide3.html">Slide 3</a></li>
+			</ul>
+		  </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="http://dhbern.eccentricity.org/wiki/Main_Page">Wiki</a></li>
+          <li><a href="http://dhbern.eccentricity.org/blog/">Blog</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
 
 
 	<main class="container">
 		
 		<section>
-			<div class="row">
-				<div class="col-md-12">
-					<h1>Here we should see all the content</h1>
-					<p>
-						One slide should have a caption and a picture
-						There should be back/forward buttons that switch from slide to slide, and a way to go to the beginning from any slide that is not the first one.
-					</p>
-					<p>I just don't know what a caption should be? So let's start with an image</p>
-					<img src="http://lorempixel.com/400/400/technics" alt="Well here we go this is some technic stuff" title="Well here we go this is some technic stuff">
+			<div class="row slide">
+				<div class="col-md-12"> <!-- Try changing to 6 or 8 or whatever -->
+					<h1>Technology and the Web</h1>
+					<figure>
+						<img src="http://lorempixel.com/400/400/technics" alt="A picture that has some surprises" title="A picture that has some surprises">
+						<figcaption>See what happens when you reload the page.</figcaption>
+					</figure>
 				</div>
 			</div>
 
 			<div class="row menu">
-				<div class="col-md-12">
-					<ul>
-						<li class="btn btn-default"><a href="slide2.html"><span class="glyphicon glyphicon-forward"></span>Next Slide</a></li>
-					</ul>
+				<div class="col-md-4 col-rightalign"><!-- No previous slide --></div>
+				<div class="col-md-4 col-centeralign"><!-- No need to start over --></div>
+				<div class="col-md-4 col-leftalign">
+					<span class="btn btn-default"><a href="slide2.html"><span class="glyphicon glyphicon-forward"></span>Next Slide</a></span>
 				</div>
 			</div>
 		</section>

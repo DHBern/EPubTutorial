@@ -12,8 +12,26 @@ a, a:link{
 	text-decoration: none;
 }
 
+.slide {
+	text-align: center;
+}
+.slide > div { /* Divs under slides are columns */
+	display: inline-block;
+	float: none;
+	margin-right: -4px;
+}
+
 .menu{
 	margin-top: 10px;
+}
+.menu .col-leftalign {
+	text-align: left;
+}
+.menu .col-rightalign {
+	text-align: right;
+}
+.menu .col-centeralign {
+	text-align: center;
 }
 
 code{
@@ -24,8 +42,6 @@ code{
 p code{
 	display: inline;
 }
-
-
 
 /* This is one of my personal settings I use for almost every page */ 
 html, body{
