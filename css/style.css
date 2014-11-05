@@ -13,9 +13,13 @@ a, a:link{
 }
 
 .slide {
+	min-height: 500px;
+}
+
+.slide > .slide-center { 
 	text-align: center;
 }
-.slide > div { /* Divs under slides are columns */
+.slide > .slide-center > div {  /* The columns below the slide-center row */
 	display: inline-block;
 	float: none;
 	margin-right: -4px;
