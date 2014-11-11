@@ -1,0 +1,6 @@
+/* These are my own CSS tweaks, on top of Bootstrap */
+
+.slide {
+	text-align: center;
+	.center-block();
+}
