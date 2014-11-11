@@ -1,5 +1,9 @@
 /* These are my own CSS tweaks, on top of Bootstrap */
 
+body {
+	padding: 70px;
+}
+
 .slide {
 	text-align: center;
 	.center-block();
