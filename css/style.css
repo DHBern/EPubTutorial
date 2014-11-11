@@ -9,6 +9,10 @@ body {
 	.center-block();
 }
 
+.slide-nav {
+	margin-top: 20px;
+}
+
 /* How to get the footer to the bottom of the screen */
 html, body {
         height: 100%;
