@@ -3,66 +3,140 @@
 	<meta charset="UTF-8">
 	<title>E-Publishing Example Page</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <a class="navbar-brand" href="index.html">E-Publishing Example</a>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Slides <b class="caret"></b></a>
-			<ul class="dropdown-menu">
-			  <li class="active"><a href="slide1.html">Slide 1</a></li>
-			  <li><a href="slide2.html">Slide 2</a></li>
-			  <li><a href="slide3.html">Slide 3</a></li>
-			</ul>
-		  </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="http://dhbern.eccentricity.org/wiki/Main_Page">Wiki</a></li>
-          <li><a href="http://dhbern.eccentricity.org/blog/">Blog</a></li>
-        </ul>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">E-Publishing Example</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="about.html">About</a></li>
+            <li><a href="http://dhbern.eccentricity.org/wiki/Main_Page">Wiki</a></li>
+            <li><a href="http://dhbern.eccentricity.org/blog/">Blog</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </nav>
+    </div>
 
+	<main>
+		<div class="container slides">
+			<section id="slider">
+				<article>
+					<div class="row">
+						<div class="col-md-12">
+							<h1>Here we should see all the content</h1>
+							<p>
+								One slide should have a caption and a picture
+								There should be back/forward buttons that switch from slide to slide, and a way to go to the beginning from any slide that is not the first one.
+							</p>
+							<p>I just don't know what a caption should be? So let's start with an image</p>
+							<img src="http://lorempixel.com/400/400/technics" alt="Well here we go this is some technic stuff" title="Well here we go this is some technic stuff">
+						</div>
+					</div>
+				</article>
 
+				<article>
+					<div class="row">
+						<div class="col-md-12">
+							<h1>Here we should see all the content</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<ol>
+								<li>First Element</li>
+								<li>Second Element</li>
+								<li>Third Element</li>
+								<li>Forth Element with a twist
+									<ol>
+										<li>Sub Element 1</li>
+										<li>Sub Element 2 be carefull to close the li-tag the correct way</li>
+									</ol>
+									<li>(The?) Fifth Element</li>
+									<li>Sixth Element</li>
+								</li>
+							</ol>
+						</div>
+						<div class="col-md-6">
+							<p>Well there is a bulletlist in the navigation bar already so let's go with a numbered list althoug we can still change it afterwards in CSS, because it has nothing to to how it is displayed rather then how it is interpreted by Google^^</p>
+							<p>If you want to have some fun with bulletlists you should try either of those two lines in css: </p>
+							<code>
+								ol{
+									list-style-type: upper-roman;
+								}
+							</code>
+							<code>
+								ol{
+									list-style-type: lower-alpha;
+								}
+							</code>
+						</div>
+					</div>
+				</article>
 
-	<main class="container">
-		
-		<section>
-		  <div class="slide">
-			<div class="row slide-center">
-				<div class="col-md-12"> <!-- Try changing to 6 or 8 or whatever -->
-					<h1>Technology and the Web</h1>
-					<figure>
-						<img src="http://lorempixel.com/400/400/technics" alt="A picture that has some surprises" title="A picture that has some surprises">
-						<figcaption>See what happens when you reload the page.</figcaption>
-					</figure>
-				</div>
-			</div>
-		  </div>
+				<article>
+					<div class="row">
+						<div class="col-md-12">
+							<h1>Here we should see all the content</h1>
+							<p>and one slide should have some text with some highlighted words that pop up tooltips when you click on them</p>
+							<p>Let's create some paragraphs with lorem ipsum and use some <code>strong</code> and <code>em</code> Tags</p>
+						</div>
+					</div>
 
+					<div class="row">
+						<div class="col-md-6">
+							<p>
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam facere nobis, officiis dolor aliquam aperiam alias quis excepturi harum dignissimos totam explicabo consectetur quasi quidem ducimus ipsum temporibus omnis quod!</span>
+								<span>Dolor blanditiis mollitia eius, laboriosam deserunt sit amet saepe laborum labore praesentium quasi natus maiores quo neque impedit maxime corporis soluta. Quam qui quaerat aliquid facere inventore hic. Quam, perferendis.</span>
+								<span>Doloremque, a possimus necessitatibus repellendus aut incidunt molestiae velit tempore consectetur. Quas, commodi molestias assumenda repellendus, dolore, nostrum beatae esse fugiat unde architecto quis fugit corporis. Architecto quas vitae minus?</span>
+							</p>
+						</div>
+						<div class="col-md-6">
+							<p>
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis assumenda, ducimus est enim velit architecto tempora, pariatur iste nemo accusantium perspiciatis, eius vitae et officiis vero consectetur animi, commodi ullam.</span>
+								<span>Quidem ab excepturi, aliquid blanditiis veniam fugiat perspiciatis, nihil alias voluptatem earum quam eaque commodi facilis exercitationem rerum! Ipsum ex, nemo facere veniam, facilis quisquam maiores veritatis. Culpa praesentium, vero?</span>
+								<span>Inventore, amet, perspiciatis! Nulla ducimus eligendi ipsa nemo omnis ex doloribus at, nihil saepe vero voluptatem velit eius debitis laudantium iure libero sapiente, unde maxime. Assumenda laboriosam nulla deserunt reprehenderit!</span>
+							</p>
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
+		<div class="container">
 			<div class="row menu">
-				<div class="col-md-4 col-rightalign"><!-- No previous slide --></div>
-				<div class="col-md-4 col-centeralign"><!-- No need to start over --></div>
-				<div class="col-md-4 col-leftalign">
-					<span class="btn btn-default"><a href="slide2.html"><span class="glyphicon glyphicon-forward"></span>Next Slide</a></span>
+				<div class="col-md-12">
+					<ul>
+						<li id="previous" class="btn btn-default disabled"><span class="glyphicon glyphicon-backward"></span>Previous Slide</a></li>
+						<li id="next" class="btn btn-default"><span class="glyphicon glyphicon-forward"></span>Next Slide</a></li>
+						<li id="restart" class="btn btn-default"><span class="glyphicon glyphicon-repeat"></span>Start over</li>
+					</ul>
 				</div>
 			</div>
-		</section>
-
+		</div>
 	</main>
 
 	<footer class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<p>Copyright© <a href="http://www.radical-design.ch" target="_blank">radical-design.ch</a> 2014 &amp; Dominique Rahm, All rights reserved.</p>
+				<p>Created by Dominique Rahm, feel free to use it anyway you like to</p>
 			</div>
 		</div>
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/slide.js"></script>
 
 </body>
 </html>
