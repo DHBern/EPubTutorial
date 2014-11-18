@@ -25,6 +25,10 @@ code {
 .btn-primary a:visited {
 	color: #ffffff;
 }
+
+.term {
+	border-bottom: 1px dotted #785378;
+}
 	
 
 /* How to get the footer to the bottom of the screen */
