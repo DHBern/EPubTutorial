@@ -13,6 +13,11 @@ body {
 	margin-top: 20px;
 }
 
+code {
+	display: inline-block;
+	white-space: pre;
+}
+
 /* How to get the footer to the bottom of the screen */
 html, body {
         height: 100%;
