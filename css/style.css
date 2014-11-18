@@ -33,7 +33,7 @@ html, body {
 .push {
 	height: 30px;
 }
-footer {
+.page-footer {
 	height: 30px;
 	background-color: #ececec;
 }
