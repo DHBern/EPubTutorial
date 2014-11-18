@@ -6,6 +6,7 @@ body {
 
 .slide {
 	text-align: center;
+	min-height: 510px;
 	.center-block();
 }
 
