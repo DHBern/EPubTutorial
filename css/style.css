@@ -19,6 +19,14 @@ code {
 	white-space: pre;
 }
 
+.btn-primary a:link {
+	color: #ffffff;
+}
+.btn-primary a:visited {
+	color: #ffffff;
+}
+	
+
 /* How to get the footer to the bottom of the screen */
 html, body {
         height: 100%;
