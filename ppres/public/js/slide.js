@@ -1,3 +1,14 @@
+// A function to retrieve and load the slideshow with a given ID
+function loadSlideshow (id) {
+	$.get("/slideshow/" + id, function(data) {
+		// The data has the slideshow name, font, and content. First put the 
+		// content in place.
+		$(".slide").empty().append(data.contents);
+		// Now set the font.
+		$(".slide").css("font-family", data.font);
+	})
+}
+
 $(document).ready(function () {
 	// This enables tooltips on our page, says the Bootstrap documentation
 	$(function () {
@@ -46,7 +57,11 @@ $(document).ready(function () {
 	$.get("/listslideshows", function(data) {
 		$("#slidelist").empty();
 		$.each(data, function(index, thing) {
-			$("#slidelist").append("<li><a href=\"#\">" + thing.name + "</a></li>");
+			var menuItem = $("<li><a href=\"#\">" + thing.name + "</a></li>");
+			menuItem.click( function() {
+				loadSlideshow(thing.id);
+			});
+			$("#slidelist").append(menuItem);
 		});
 	});
 	
