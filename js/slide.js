@@ -1,36 +1,45 @@
-var number_of_slides = $('.slide article').length;
-
-$( document ).ready(function() {
-	var current_slide = 1;
-	slide(current_slide);
-	$('#previous').click(function(){
-		if(current_slide > 1){
-			current_slide--;
-			slide(current_slide);
-		}
+$(document).ready(function () {
+	// This enables tooltips on our page, says the Bootstrap documentation
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip();
 	});
-
-	$('#next').click(function(){
-		if(current_slide < number_of_slides){
-			current_slide++;
-			slide(current_slide);
-		}
-	});
-
-	$('#restart').click(function(){
-		current_slide = 1;
-		slide(current_slide);
-	});
-});
-
-function slide(current_slide){
-	var oldslide = $('.slide article:not(.hidden)')	
-	var newslide = $('.slide article:nth-child(' + current_slide + ')');
-	oldslide.hide()
-	newslide.fadeIn()
 	
-	// Correct our buttons
-    current_slide == 1 ? $('#previous').addClass('hidden') : $('#previous').removeClass('hidden')
-    current_slide == 1 ? $('#restart').addClass('hidden') : $('#restart').removeClass('hidden')
-    current_slide == number_of_slides ? $('#next').addClass('hidden') : $('#next').removeClass('hidden')
-}
+	// This is going to make our slideshow work.
+	var numberOfSlides = $(".slide article").length; // .size()
+	var currentSlide = 1;
+	$("#next-button").click( function () {
+		var newSlide = currentSlide + 1;
+		$(".slide article:nth-child(" + currentSlide + ")").addClass("hidden");
+		$(".slide article:nth-child(" + newSlide + ")").removeClass("hidden");
+		$("#previous-button").removeClass("hidden");
+		$("#restart-button").removeClass("hidden");
+		if (newSlide == numberOfSlides ) {
+		 	$("#next-button").addClass("hidden");
+			$("#restart-button").removeClass("btn-default").addClass("btn-primary");
+		}
+		currentSlide = newSlide;
+	});
+	$("#previous-button").click( function () {
+		var newSlide = currentSlide - 1;
+		$(".slide article:nth-child(" + currentSlide + ")").addClass("hidden");
+		$(".slide article:nth-child(" + newSlide + ")").removeClass("hidden");
+		if (newSlide == 1) {
+			$("#previous-button").addClass("hidden");
+			$("#restart-button").addClass("hidden");
+		}
+		$("#next-button").removeClass("hidden");
+		$("#restart-button").removeClass("btn-primary").addClass("btn-default");
+		currentSlide = newSlide;
+	});
+	$("#restart-button").click( function () {
+		var newSlide = 1;
+		$(".slide article:nth-child(" + currentSlide + ")").addClass("hidden");
+		$(".slide article:nth-child(" + newSlide + ")").removeClass("hidden");
+		$("#previous-button").addClass("hidden");
+		$("#restart-button").addClass("hidden");
+		$("#next-button").removeClass("hidden");
+		$("#restart-button").removeClass("btn-primary").addClass("btn-default");
+		currentSlide = newSlide;
+	});
+	
+});

@@ -1,40 +1,17 @@
-/* These are my own CSS tweaks, on top of Bootstrap */
-
 body {
 	padding-top: 70px;
+	font-family: Garamond;
 }
-
 .slide {
-	text-align: center;
-	min-height: 510px;
-	.center-block();
+        text-align: center;
+		min-height: 510px;
+        .center-block();
 }
 
-.slide-nav {
-	margin-top: 20px;
-}
-
-code {
-	display: inline-block;
-	white-space: pre;
-}
-
-.btn-primary a:link {
-	color: #ffffff;
-}
-.btn-primary a:visited {
-	color: #ffffff;
-}
-
-.term {
-	border-bottom: 1px dotted #785378;
-}
-	
-
-/* How to get the footer to the bottom of the screen */
 html, body {
-        height: 100%;
+	height: 100%;
 }
+
 #wrap {
 	min-height: 100%;
 	height: auto !important;
@@ -45,7 +22,17 @@ html, body {
 .push {
 	height: 30px;
 }
-.page-footer {
+
+body > footer {
 	height: 30px;
 	background-color: #ececec;
+}
+
+.slide-button {
+	margin-top: 20px;
+}
+
+code {
+	display: inline-block;
+	white-space: pre;
 }

@@ -3,97 +3,61 @@
 		<meta charset="UTF-8">
 		<title>E-Publishing Example Page</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="javascripts/slide.js"></script>
 	</head>
 	<body>
 		<div id="wrap">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="container">
-					<a class="navbar-brand" href="index.html">Our Electronic Publication</a>
-					<!-- Add a menu -->
-					<ul class="nav navbar-right navbar-nav">
-						<li class="dropdown">
-							<a href="#" data-toggle="dropdown">Slides <span class="caret"/></a>
-							<ul class="dropdown-menu">
-								<li><a href="slide1.html">Slide 1</a></li>
-								<li><a href="slide2.html">Slide 2</a></li>
-								<li><a href="slide3.html">Slide 3</a></li>
-							</ul>
-						</li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="/wiki">Wiki</a></li>
-						<li><a href="/blog">Blog</a></li>
-					</ul>
-				</div>
-			</nav>
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Our Electronic Publication</a>
+				<!-- Add a menu -->
+				<ul class="nav navbar-right navbar-nav">
+					<li>
+						<a href="#" data-toggle="dropdown">Slides <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="slide1.html">Slide 1</a></li>
+							<li><a href="slide2.html">Slide 2</a></li>
+							<li><a href="slide3.html">Slide 3</a></li>
+						</ul>
+					</li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="/wiki">Wiki</a></li>
+					<li><a href="/blog">Blog</a></li>
+				</ul>
+			</div>
+		</nav>
 
-			<main class="container">
-				<!-- Our main page content goes here! -->
-				<div class="jumbotron">
-					<h1>Powerpointless Presentations</h1>
-					<p>Is that Powerpoint-less, or Power-pointless...?</p>
-					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#moreinfo">Let's find out.</button>
+		<main class="container">
+			<div class="jumbotron">
+				<h1>Powerpointless Presentations</h1>
+				<p>Is that Powerpoint-less, or Power-pointless?</p>
+				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#moreinfo">Let's find out.</button>
+			</div>
+			<p>The purpose of this class is to teach ourselves <abbr title="HyperText Markup Language" data-toggle="tooltip" data-placement="top">HTML</abbr>, <abbr title="Cascading Style Sheets" data-toggle="tooltip" data-placement="right">CSS</abbr>, and Javascript by making a website that does what Powerpoint does without all of the annoyance of needing to install Microsoft Office. Cool, huh?</p>
+		</main>
+		<div class="push"></div>
+	</div>
+	<div class="modal" id="moreinfo" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
 				</div>
-				<div class="row">
-					<div class="col-md-4 text-center">
-						<img class="img-responsive" src="https://lh5.googleusercontent.com/-cQUhZVtrwqk/TXVkZQQyMXI/AAAAAAAAAFE/l5SLV4DiC1k/s1600/Slide1.jpg">
-						<p>Image copyright <a href="http://powerpointanonymous.blogspot.ch/2011/03/why-is-everybody-hatin-on-me.html">Powerpoint Anonymous</a></p>
-					</div>
-					<div class="col-md-8">
-						<p>The purpose of this project is to get us started with using 
-						<span class="term" data-toggle="tooltip" data-placement="top" title="HyperText Markup Language">HTML</span> and
-						<span class="term" data-toggle="tooltip" data-placement="top" title="Cascading Style Sheets">CSS</span> via
-						the Bootstrap framework, and to show how much of Powerpoint's functionality we can
-						do for ourselves - for the rest of it, well, we'll just need to learn some Javascript!</p>
-					</div>
+				<div class="modal-body">
 				</div>
-			</main>
-			<div class="push"></div>		
-		</div>
-		
-		<!-- Let's make a modal dialog, to see how it works -->
-		<div class="modal" id="moreinfo" tabindex="-1">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<!-- The title goes here, and maybe an X to close it. -->
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Surprise!</h4>
-					</div>
-					<div class="modal-body">
-						<p>Any old HTML content can go in here, subject to a few conditions (such as,
-						you can't have a modal within a modal.) See 
-						<a href="http://getbootstrap.com/javascript/#modals">the Bootstrap documentation</a> for 
-						more details.</p>
-						<p>Quite often there might be a form in a modal dialog (for instance, to make
-						a comment or to log into a website.) We haven't covered forms, since they usually
-						need some "server-side logic" in order to work.</p>
-						<p>Using Bootstrap's modal components gets you a lot of features for free - not only
-						the styling and the Javascript that makes it work, but also some convenience features.
-						See what happens if you press the 'Esc' button!</p>
-					</div>
-					<div class="modal-footer">
-						<!-- The action buttons go here. -->
-						<button type="button" class="btn btn-default" data-dismiss="modal">Neat!</button>
-						<button type="button" class="btn btn-primary"><a href="http://getbootstrap.com/javascript/#modals">Tell me more.</a></button>
-					</div>
+				<div class="modal-footer">
 				</div>
 			</div>
 		</div>
-
-		<footer class="container-fluid page-footer">
+	</div>
+		<footer class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 					<p>Copyright &copy; us, released under a <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons CC-BY</a> license.
 				</div>
 			</div>
 		</footer>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		<script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-		</script>
 	</body>
 </html>
