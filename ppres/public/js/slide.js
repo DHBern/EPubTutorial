@@ -42,4 +42,12 @@ $(document).ready(function () {
 		currentSlide = newSlide;
 	});
 	
+	// Get the list of slideshows, and populate the dropdown menu with them.
+	$.get("/listslideshows", function(data) {
+		$("#slidelist").empty();
+		$.each(data, function(index, thing) {
+			$("#slidelist").append("<li><a href=\"#\">" + thing.name + "</a></li>");
+		});
+	});
+	
 });
