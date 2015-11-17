@@ -1,3 +1,6 @@
+var currentSlide = 1;
+var numberOfSlides = 0;
+
 // A function to retrieve and load the slideshow with a given ID
 function loadSlideshow (id) {
 	$.get("/slideshow/" + id, function(data) {
@@ -6,7 +9,32 @@ function loadSlideshow (id) {
 		$(".slide").empty().append(data.contents);
 		// Now set the font.
 		$(".slide").css("font-family", data.font);
+		numberOfSlides = $(".slide article").length;
+		loadSlide(1);
 	})
+}
+
+function loadSlide (newSlide) {
+	$(".slide article").addClass("hidden");
+	$(".slide article:nth-child(" + newSlide + ")").removeClass("hidden");
+	// Hide the previous and restart buttons if necessary.
+	if (newSlide == 1) {
+		$("#previous-button").addClass("hidden");
+		$("#restart-button").addClass("hidden");
+	} else {
+		$("#previous-button").removeClass("hidden");
+		$("#restart-button").removeClass("hidden");		
+	}
+	// Hide the next button, and change the look of the restart button,
+	// if necessary.
+	if (newSlide == numberOfSlides ) {
+	 	$("#next-button").addClass("hidden");
+		$("#restart-button").removeClass("btn-default").addClass("btn-primary");
+	} else {
+	 	$("#next-button").removeClass("hidden");
+		$("#restart-button").removeClass("btn-primary").addClass("btn-default");		
+	}
+	currentSlide = newSlide;	
 }
 
 $(document).ready(function () {
@@ -16,41 +44,16 @@ $(document).ready(function () {
 	});
 	
 	// This is going to make our slideshow work.
-	var numberOfSlides = $(".slide article").length; // .size()
-	var currentSlide = 1;
 	$("#next-button").click( function () {
 		var newSlide = currentSlide + 1;
-		$(".slide article:nth-child(" + currentSlide + ")").addClass("hidden");
-		$(".slide article:nth-child(" + newSlide + ")").removeClass("hidden");
-		$("#previous-button").removeClass("hidden");
-		$("#restart-button").removeClass("hidden");
-		if (newSlide == numberOfSlides ) {
-		 	$("#next-button").addClass("hidden");
-			$("#restart-button").removeClass("btn-default").addClass("btn-primary");
-		}
-		currentSlide = newSlide;
+		loadSlide(newSlide);
 	});
 	$("#previous-button").click( function () {
 		var newSlide = currentSlide - 1;
-		$(".slide article:nth-child(" + currentSlide + ")").addClass("hidden");
-		$(".slide article:nth-child(" + newSlide + ")").removeClass("hidden");
-		if (newSlide == 1) {
-			$("#previous-button").addClass("hidden");
-			$("#restart-button").addClass("hidden");
-		}
-		$("#next-button").removeClass("hidden");
-		$("#restart-button").removeClass("btn-primary").addClass("btn-default");
-		currentSlide = newSlide;
+		loadSlide(newSlide);
 	});
 	$("#restart-button").click( function () {
-		var newSlide = 1;
-		$(".slide article:nth-child(" + currentSlide + ")").addClass("hidden");
-		$(".slide article:nth-child(" + newSlide + ")").removeClass("hidden");
-		$("#previous-button").addClass("hidden");
-		$("#restart-button").addClass("hidden");
-		$("#next-button").removeClass("hidden");
-		$("#restart-button").removeClass("btn-primary").addClass("btn-default");
-		currentSlide = newSlide;
+		loadSlide(1);
 	});
 	
 	// Get the list of slideshows, and populate the dropdown menu with them.
