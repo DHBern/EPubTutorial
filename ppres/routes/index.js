@@ -16,4 +16,13 @@ router.get('/listslideshows', function(req, res, next) {
 	});
 });
 
+router.get('/slideshow/:id', function (req, res) {
+	db.get("SELECT name, font, contents FROM slideshows WHERE id=" + req.params.id, function(err, row) {
+		// We need to do some magic to turn the contents back into HTML.
+		var html = row.contents.toString();
+		row.contents = html;
+		res.send(row);
+	});
+});
+
 module.exports = router;
